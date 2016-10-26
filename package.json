@@ -4,7 +4,16 @@
   "description": "My website",
   "main": "index.js",
   "scripts": {
-    "build": "schlump --var.foo=bar"
+    "schlump": "schlump --var.foo=bar",
+    "sass": "node-sass --source-map-embed --include-path scss src/styles/index.scss dist/statics/index.css",
+    "sass-lint": "sass-lint -vq src/**/*.scss",
+    "autoprefixer": "autoprefixer-cli --no-inline-map dist/statics/index.css",
+    "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
+    "watch-html": "nodemon -e html -x 'npm run schlump'",
+    "watch-sass": "nodemon -e scss -x 'npm run sass-lint & npm run sass'",
+    "watch": "npm run watch-html & npm run watch-sass",
+    "build": "npm run sass && npm run autoprefixer && npm run cleancss && npm run schlump",
+    "start": "npm run watch"
   },
   "repository": {
     "type": "git",
@@ -17,6 +26,11 @@
   },
   "homepage": "https://github.com/levito/veitlehmann.de#readme",
   "devDependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "clean-css": "^3.4.20",
+    "node-sass": "^3.10.1",
+    "nodemon": "^1.11.0",
+    "sass-lint": "^1.9.1",
     "schlump": "^0.12.0"
   }
 }
