@@ -1,0 +1,16 @@
+---
+name: Layout
+---
+<html>
+<head>
+	<title>{props.title}</title>
+	<link href="./statics/site.css" rel="stylesheet"/>
+</head>
+<body>
+	<div className="content">
+		{props.children}
+	</div>
+	<hr/>
+	Build with <a href="https://github.com/sinnerschrader/schlump">schlump</a> and <JsLogo base={props.base}/>
+</body>
+</html>

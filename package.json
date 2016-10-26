@@ -1,0 +1,22 @@
+{
+  "name": "veitlehmann",
+  "version": "1.0.0",
+  "description": "My website",
+  "main": "index.js",
+  "scripts": {
+    "build": "schlump --var.foo=bar"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/levito/veitlehmann.de.git"
+  },
+  "author": "Veit Lehmann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/levito/veitlehmann.de/issues"
+  },
+  "homepage": "https://github.com/levito/veitlehmann.de#readme",
+  "devDependencies": {
+    "schlump": "^0.12.0"
+  }
+}
