@@ -11,7 +11,7 @@ $cube-size: 100vmax;
   }
 
   50% {
-    transform: scale(.8);
+    transform: scale(.75);
   }
 
   100% {
@@ -40,7 +40,7 @@ body {
 
 html {
   background: #444;
-  font-size: calc(10px + 5 * ((100vw - 400px) / 1000));
+  font-size: calc(12px + 4 * ((100vw - 400px) / 1000));
   box-sizing: border-box;
 
   @media screen and (max-width: 400px) {
@@ -63,8 +63,10 @@ body {
 
 .back {
   position: absolute;
-  top: 3vmin;
-  left: 3vmin;
+  top: .5rem;
+  left: 1rem;
+  font-size: 3rem;
+  color: #f6f6f6;
   z-index: 1;
 }
 
@@ -150,8 +152,8 @@ body {
 
 .section__title,
 .section--0 {
-  font-size: 4rem;
-  line-height: 1.15;
+  font-size: 3rem;
+  line-height: 1.2;
   font-weight: 500;
 }
 

@@ -3,8 +3,8 @@ title: Veit Lehmann - Senior Frontend Entwickler
 route: /index.html
 sections: [
   "Senior Frontend Entwickler", 
-  "CSS-Architektur",
   "User Experience",
+  "CSS-Architektur",
   "Open Source"
 ]
 ---
@@ -30,16 +30,16 @@ sections: [
           <Link id="4">{frontmatter.sections[3]}</Link>.
         </p>
       </Section>
-      <Section title="Senior Frontend Entwickler" side="1">
+      <Section title={frontmatter.sections[0]} side="1">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
-      <Section title="CSS-Architektur" side="2">
+      <Section title={frontmatter.sections[1]} side="2">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
-      <Section title="User Experience" side="3">
+      <Section title={frontmatter.sections[2]} side="3">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
-      <Section title="Open Source" side="4">
+      <Section title={frontmatter.sections[3]} side="4">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
     </article>
