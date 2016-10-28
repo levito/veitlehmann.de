@@ -1,0 +1,16 @@
+---
+name: Section
+---
+<section 
+  className={'section section--' + props.side}
+  id={helpers.hyphenate(props.title)}
+>
+  <div className="section__body">
+    {props.title && (
+      <h2 className="section__title">
+        {props.title}
+      </h2>
+    )}
+    {props.children}
+  </div>
+</section>

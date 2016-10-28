@@ -1,0 +1,9 @@
+---
+name: Link
+---
+<a 
+  href={'#' + helpers.hyphenate(props.children)}
+  className={'link link--' + props.id}
+>
+  {props.children}
+</a>

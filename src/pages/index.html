@@ -1,11 +1,47 @@
 ---
-title: Schlump!
+title: Veit Lehmann - Senior Frontend Entwickler
 route: /index.html
+sections: [
+  "Senior Frontend Entwickler", 
+  "CSS-Architektur",
+  "User Experience",
+  "Open Source"
+]
 ---
 <Layout {...frontmatter} base=".">
-	<div className="container">
-		<MyComponent message="Hello World!"/>
-		<MyComponent/>
-	</div>
-	<a href="./index2.html">Link to page 2</a>
+  <a href="#" className="back">#</a>
+  {frontmatter.sections.map((section, i) => (
+    <Target section={section} side={i + 1}/>
+  ))}
+  <div className="world">
+    <article className="cube">
+      <Section side="0">
+        <p>
+          Hallo, ich bin Veit Lehmann,
+          {" "}
+          <Link id="1">{frontmatter.sections[0]}</Link>
+          {" "}
+          mit einer Passion für
+          {" "}
+          <Link id="2">{frontmatter.sections[1]}</Link>,
+          {" "}
+          <Link id="3">{frontmatter.sections[2]}</Link> und
+          {" "}
+          <Link id="4">{frontmatter.sections[3]}</Link>.
+        </p>
+      </Section>
+      <Section title="Senior Frontend Entwickler" side="1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
+      </Section>
+      <Section title="CSS-Architektur" side="2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
+      </Section>
+      <Section title="User Experience" side="3">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
+      </Section>
+      <Section title="Open Source" side="4">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
+      </Section>
+    </article>
+  </div>
 </Layout>
