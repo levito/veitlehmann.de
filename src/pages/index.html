@@ -2,44 +2,86 @@
 title: Veit Lehmann - Senior Frontend Entwickler
 route: /index.html
 sections: [
-  "Senior Frontend Entwickler", 
+  "Home",
+  "Frontend Entwickler",
   "User Experience",
-  "CSS-Architektur",
+  "CSS Architektur",
   "Open Source"
 ]
 ---
 <Layout {...frontmatter} base=".">
-  <a href="#" className="back">#</a>
   {frontmatter.sections.map((section, i) => (
-    <Target section={section} side={i + 1}/>
+    !i || <Target section={section} side={i}/>
   ))}
+  <a href="#" className="home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+      <path d="M32 0C14.327 0 0 14.327 0 32s14.327 32 32 32 32-14.327 32-32S49.673 0 32 0zm16 46H36V36h-.013c-.065-2.15-1.82-3.878-3.987-3.878S28.078 33.85 28.012 36H28v10H16V28l16-14 16 14v18z"/>
+    </svg>
+  </a>
+  {/*<Nav items={frontmatter.sections}/>*/}
   <div className="world">
     <article className="cube">
       <Section side="0">
         <p>
           Hallo, ich bin Veit Lehmann,
           {" "}
-          <Link id="1">{frontmatter.sections[0]}</Link>
+          <Link id="1">{frontmatter.sections[1]}</Link>
           {" "}
           mit einer Passion für
           {" "}
-          <Link id="2">{frontmatter.sections[1]}</Link>,
+          <Link id="2">{frontmatter.sections[2]}</Link>,
           {" "}
-          <Link id="3">{frontmatter.sections[2]}</Link> und
+          <Link id="3">{frontmatter.sections[3]}</Link> und
           {" "}
-          <Link id="4">{frontmatter.sections[3]}</Link>.
+          <Link id="4">{frontmatter.sections[4]}</Link>.
         </p>
       </Section>
-      <Section title={frontmatter.sections[0]} side="1">
+      <Section title={frontmatter.sections[1]} side="1">
+        <p>
+          Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl im Agentur- als auch im Startup-Umfeld. Meine Wurzeln habe ich im Design, heute bin ich Frontend Entwickler mit starkem Fokus auf <a href="#user-experience">Design und User Experience</a>. Meine Stärken habe ich besonders im Bereich der <a href="#css-architektur">CSS Architektur</a>.
+        </p>
+        <h2>Let’s work together!</h2>
+        <p>
+          Aktuell bin ich auf der Suche nach einem neuen Job, idealerweise in Hamburg. <a href="mailto:post@veitlehmann.de">Kontaktieren Sie mich</a>, wenn Sie mit mir zusammenarbeiten wollen, gern auch über <a href="https://www.linkedin.com/in/veitlehmann">LinkedIn</a> oder <a href="https://www.xing.com/profile/Veit_Lehmann">XING</a>.
+        </p>
+        <h2>Meine beruflichen Stationen</h2>
+        <dl className="cv">
+          <dt>12/2015 – 01/2017</dt>
+          <dd>
+            LOVOO GmbH<br/>
+            Senior Frontend Developer
+          </dd>
+          <dt>09/2011 – 11/2015</dt>
+          <dd>
+            SinnerSchrader Deutschland GmbH<br/>
+            Senior Frontend Developer
+          </dd>
+          <dt>12/2007 – 08/2011</dt>
+          <dd>
+            SinnerSchrader Deutschland GmbH<br/>
+            Frontend Developer
+          </dd>
+          <dt>01/2007 – 12/2007</dt>
+          <dd>
+            Freiberuflich selbstständig<br/>
+            Designer und Webworker
+          </dd>
+          <dt>10/2003 – 09/2006</dt>
+          <dd>
+            COLOSSEUM Design-Beratungs-GmbH<br/> 
+            Studienbegleitendes Praktikum, Schwerpunkt Design<br/>
+            Studium der Medienproduktion<br/>
+            Abschluss als Diplom-Informatiker (BA)
+          </dd>
+        </dl>
+      </Section>
+      <Section title={frontmatter.sections[2]} side="2">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
-      <Section title={frontmatter.sections[1]} side="2">
+      <Section title={frontmatter.sections[3]} side="3">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
-      <Section title={frontmatter.sections[2]} side="3">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
-      </Section>
-      <Section title={frontmatter.sections[3]} side="4">
+      <Section title={frontmatter.sections[4]} side="4">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe consequuntur voluptatum consectetur tempora quam, illum tempore officiis sit facilis similique architecto magnam, ut atque! Asperiores amet nostrum libero iure earum.
       </Section>
     </article>

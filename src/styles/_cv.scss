@@ -1,0 +1,67 @@
+@import 'variables';
+
+.cv {
+  overflow: hidden;
+
+  dt,
+  dd {
+    margin-left: 2rem;
+    padding-left: 2rem;
+    border-left: .2rem solid transparentize($color-offwhite, .7);
+
+    @media screen and (min-width: 800px) {
+      width: calc(50% + .1rem);
+      margin-left: 0;
+      clear: both;
+
+      &:nth-of-type(2n + 1) {
+        padding-right: 2rem;
+        padding-left: 0;
+        float: left;
+        border-right: .2rem solid transparentize($color-offwhite, .7);
+        border-left: 0;
+        text-align: right;
+      }
+
+      &:nth-of-type(2n) {
+        float: right;
+      }
+    }
+  }
+
+  dt {
+    position: relative;
+    font-weight: 500;
+
+    &::before {
+      position: absolute;
+      top: .6rem;
+      left: -.6rem;
+      width: 1rem;
+      height: 1rem;
+      border: .25rem solid;
+      border-radius: 50%;
+      background: $color-green;
+      content: '';
+    }
+
+    @media screen and (min-width: 800px) {
+      &:nth-of-type(2n + 1) {
+        &::before {
+          right: -.6rem;
+          left: auto;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 799px) {
+    dd {
+      padding-bottom: 1.5rem;
+
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+}

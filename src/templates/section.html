@@ -6,11 +6,13 @@ name: Section
   id={helpers.hyphenate(props.title)}
 >
   <div className="section__body">
-    {props.title && (
-      <h2 className="section__title">
-        {props.title}
-      </h2>
-    )}
-    {props.children}
+    <div className="section__content">
+      {props.title && (
+        <h1 className="section__title">
+          {props.title}
+        </h1>
+      )}
+      {props.children}
+    </div>
   </div>
 </section>
