@@ -4,7 +4,7 @@
   "description": "My website",
   "main": "index.js",
   "scripts": {
-    "schlump": "schlump --var.foo=bar",
+    "schlump": "schlump",
     "sass": "node-sass --source-map-embed --include-path scss src/styles/index.scss dist/statics/index.css",
     "sass-lint": "sass-lint -vq src/**/*.scss",
     "autoprefixer": "autoprefixer-cli --no-inline-map dist/statics/index.css",
