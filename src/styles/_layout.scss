@@ -34,12 +34,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html,
-body {
-  position: relative;
-  height: 100vh;
-}
-
 html {
   background: $color-offblack;
   font-size: calc(12px + 4 * ((100vw - 400px) / 1000));
@@ -169,6 +163,11 @@ body {
 
   body {
     display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     align-items: center;
     justify-content: center;
   }
@@ -205,7 +204,6 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: auto;
-    -webkit-overflow-scrolling: touch;
   }
 
   .section--0 {
