@@ -5,8 +5,8 @@
 
   dt,
   dd {
-    margin-left: 2rem;
-    padding-left: 2rem;
+    margin-left: 1.4rem;
+    padding-left: 1.4rem;
     border-left: .2rem solid transparentize($color-offwhite, .7);
 
     @media screen and (min-width: 800px) {
@@ -15,7 +15,7 @@
       clear: both;
 
       &:nth-of-type(2n + 1) {
-        padding-right: 2rem;
+        padding-right: 1.4rem;
         padding-left: 0;
         float: left;
         border-right: .2rem solid transparentize($color-offwhite, .7);

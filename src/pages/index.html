@@ -7,10 +7,17 @@ sections:
   - User Experience
   - CSS Architektur
   - Open Source
+  - Impressum
 ---
 <Layout {...frontmatter} base=".">
-  <Section side="0">
-    <p>
+  <Section side="0" footer={(
+    <footer className="footer">
+      Copyright © {new Date().getFullYear()} Veit Lehmann
+      {" • "}
+      <Link id="5">{frontmatter.sections[5]}</Link>
+    </footer>
+  )}>
+    <p className="section__intro">
       Hallo, ich bin Veit Lehmann,
       {" "}
       <Link id="1">{frontmatter.sections[1]}</Link>
@@ -121,6 +128,21 @@ sections:
     </p>
     <p>
       Einen Eindruck über meine Open-Source-Aktivitäten können Sie sich <a href="https://github.com/levito" target="_blank">auf meinem GitHub-Profil</a> verschaffen.
+    </p>
+  </Section>
+  <Section title={frontmatter.sections[5]} side="5">
+    <h2>Domainbetreiber/-inhaber</h2>
+    <p>
+      Veit Lehmann<br/>
+      Käthe-Kollwitz-Ufer 27<br/>
+      01307 Dresden<br/>
+      <a href="mailto:post@veitlehmann.de">post@veitlehmann.de</a>
+    </p>
+    <h2>Inhaltlich verantwortlich gemäß § 6 MDStV</h2>
+    <p>Veit Lehmann, Anschrift wie oben</p>
+    <h2>Haftungshinweis</h2>
+    <p>
+      Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Die Angaben in diesem Dienst wurden sorgfältig geprüft und entsprechen dem jeweils neuesten Stand. Dennoch kann keine Garantie für die Vollständigkeit, Richtigkeit und Aktualität übernommen werden.
     </p>
   </Section>
 </Layout>
