@@ -11,9 +11,10 @@
     "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
     "watch-html": "nodemon -w src -e html,js -x 'npm run schlump'",
     "watch-sass": "nodemon -w src -e scss -x 'npm run sass-lint & npm run sass'",
-    "watch": "npm run watch-html & npm run watch-sass",
+    "clean": "rimraf dist",
+    "watch": "npm run clean && npm run watch-html & npm run watch-sass",
     "serve": "npm run watch & browser-sync start -s dist -f dist --no-notify --no-open",
-    "build": "npm run sass && npm run autoprefixer && npm run cleancss && npm run schlump",
+    "build": "npm run clean && npm run sass && npm run autoprefixer && npm run cleancss && npm run schlump",
     "start": "npm run serve"
   },
   "repository": {
@@ -32,6 +33,7 @@
     "clean-css": "^3.4.20",
     "node-sass": "^3.10.1",
     "nodemon": "^1.11.0",
+    "rimraf": "^2.5.4",
     "sass-lint": "^1.9.1",
     "schlump": "^0.12.0"
   }
