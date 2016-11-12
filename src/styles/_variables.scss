@@ -8,3 +8,17 @@ $color-red: hsl(0, 35%, 55%); // #b66; // 0, 45, 73
 $color-blue: hsl(210, 45%, 55%); // #69c; // 210, 50, 80
 
 $cube-size: 100vmax;
+
+@mixin vmax($prop, $prefix: #{''}, $suffix: #{''}, $scale: 100) {
+  @media (orientation: landscape) {
+    #{$prop}: #{$prefix}#{$scale}vw#{$suffix};
+  }
+
+  @media (orientation: portrait) {
+    #{$prop}: #{$prefix}#{$scale}vh#{$suffix};
+  }
+
+  @supports (width: 1vmax) {
+    #{$prop}: #{$prefix}#{$scale}vmax#{$suffix};
+  }
+}

@@ -119,6 +119,7 @@ body {
 }
 
 .section__content {
+  align-self: center;
   max-width: 1400px;
   margin: 0 auto;
 }
@@ -177,7 +178,7 @@ body {
   text-align: center;
 }
 
-@supports (width: 1vmax) {
+@supports (transform-style: preserve-3d) {
   html,
   body {
     overflow: hidden;
@@ -195,11 +196,11 @@ body {
   }
 
   .world {
+    @include vmax(width);
+    @include vmax(min-width);
+    @include vmax(height);
+    @include vmax(perspective);
     position: relative;
-    width: $cube-size;
-    min-width: $cube-size;
-    height: $cube-size;
-    perspective: $cube-size;
   }
 
   .cube,
@@ -212,7 +213,7 @@ body {
   }
 
   .cube {
-    transform: translateZ(-$cube-size / 2) rotateY(0deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateY(0deg)'}, -50);
     transform-style: preserve-3d;
     transition: transform 1s ease;
   }
@@ -229,27 +230,27 @@ body {
   }
 
   .section--0 {
-    transform: translateZ($cube-size / 2);
+    @include vmax(transform, #{'translateZ('}, #{')'}, 50);
   }
 
   .section--1 {
-    transform: rotateX(90deg) translateZ($cube-size / 2);
+    @include vmax(transform, #{'rotateX(90deg) translateZ('}, #{')'}, 50);
   }
 
   .section--2 {
-    transform: rotateY(-90deg) translateZ($cube-size / 2);
+    @include vmax(transform, #{'rotateY(-90deg) translateZ('}, #{')'}, 50);
   }
 
   .section--3 {
-    transform: rotateY(90deg) translateZ($cube-size / 2);
+    @include vmax(transform, #{'rotateY(90deg) translateZ('}, #{')'}, 50);
   }
 
   .section--4 {
-    transform: rotateX(-90deg) translateZ($cube-size / 2);
+    @include vmax(transform, #{'rotateX(-90deg) translateZ('}, #{')'}, 50);
   }
 
   .section--5 {
-    transform: rotateX(180deg) translateZ($cube-size / 2);
+    @include vmax(transform, #{'rotateX(180deg) translateZ('}, #{')'}, 50);
   }
 
   .target {
@@ -263,22 +264,22 @@ body {
   }
 
   .target--1:target ~ .world .cube {
-    transform: translateZ(-$cube-size / 2) rotateX(-90deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateX(-90deg)'}, -50);
   }
 
   .target--2:target ~ .world .cube {
-    transform: translateZ(-$cube-size / 2) rotateY(90deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateY(90deg)'}, -50);
   }
 
   .target--3:target ~ .world .cube {
-    transform: translateZ(-$cube-size / 2) rotateY(-90deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateY(-90deg)'}, -50);
   }
 
   .target--4:target ~ .world .cube {
-    transform: translateZ(-$cube-size / 2) rotateX(90deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateX(90deg)'}, -50);
   }
 
   .target--5:target ~ .world .cube {
-    transform: translateZ(-$cube-size / 2) rotateX(-180deg);
+    @include vmax(transform, #{'translateZ('}, #{') rotateX(-180deg)'}, -50);
   }
 }
