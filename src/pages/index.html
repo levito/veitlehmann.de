@@ -10,13 +10,7 @@ sections:
   - Impressum
 ---
 <Layout {...frontmatter} base=".">
-  <Section side="0" footer={(
-    <footer className="footer">
-      Copyright © {new Date().getFullYear()} Veit Lehmann
-      {" • "}
-      <Link id="5">{frontmatter.sections[5]}</Link>
-    </footer>
-  )}>
+  <Section side="0" footer={<Footer {...frontmatter} />}>
     <p className="section__intro">
       Hallo, ich bin Veit Lehmann,
       {" "}
@@ -32,117 +26,18 @@ sections:
     </p>
   </Section>
   <Section title={frontmatter.sections[1]} side="1">
-    <p>
-      Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl im Agentur- als auch im Startup-Umfeld. Meine Wurzeln habe ich im Design, heute bin ich Frontend Entwickler mit starkem Fokus auf <a href="#user-experience">Design und User Experience</a>. Meine Stärken habe ich besonders im Bereich der <a href="#css-architektur">CSS Architektur</a>.
-    </p>
-    <h2>Let’s work together!</h2>
-    <p>
-      Aktuell bin ich auf der Suche nach einem neuen Job, idealerweise in Hamburg. <a href="mailto:post@veitlehmann.de">Kontaktieren Sie mich</a>, wenn Sie mit mir zusammenarbeiten wollen, gern auch über <a href="https://www.linkedin.com/in/veitlehmann" target="_blank">LinkedIn</a> oder <a href="https://www.xing.com/profile/Veit_Lehmann" target="_blank">XING</a>.
-    </p>
-    <h2>Meine beruflichen Stationen</h2>
-    <dl className="cv">
-      <dt>12/2015 – 01/2017</dt>
-      <dd>
-        LOVOO GmbH<br/>
-        Senior Frontend Developer
-      </dd>
-      <dt>09/2011 – 11/2015</dt>
-      <dd>
-        SinnerSchrader Deutschland GmbH<br/>
-        Senior Frontend Developer
-      </dd>
-      <dt>12/2007 – 08/2011</dt>
-      <dd>
-        SinnerSchrader Deutschland GmbH<br/>
-        Frontend Developer
-      </dd>
-      <dt>01/2007 – 12/2007</dt>
-      <dd>
-        Freiberuflich selbstständig<br/>
-        Designer und Webworker
-      </dd>
-      <dt>10/2003 – 09/2006</dt>
-      <dd>
-        COLOSSEUM Design-Beratungs-GmbH<br/> 
-        Studienbegleitendes Praktikum, Schwerpunkt Design<br/>
-        Studium der Medienproduktion<br/>
-        Abschluss als Diplom-Informatiker (BA)
-      </dd>
-    </dl>
-    <h2>Kompetenzen und Erfahrungen</h2>
-    <ul>
-      <li><a href="#user-experience">Nutzerzentrierte</a> Webentwicklung</li>
-      <li><a href="#css-architektur">CSS-Architektur</a> nach verschiedenen Methodiken</li>
-      <li>HTML5, SVG, Accessibility</li>
-      <li>Responsive Design, Legacy Browser Support, Progressive Enhancement, Graceful Degradation</li>
-      <li>Styling mit Less, Sass, PostCSS und CSS-Modules</li>
-      <li>Client-Side JS mit React, AngularJS, jQuery und Vanilla JS</li>
-      <li>Server-Side JS mit Koa und Express</li>
-      <li>Mobile-App-Entwicklung mit React Native</li>
-      <li>JS-Erweiterungen und Compile-To-JS mit Babel, Flow, TypeScript, CoffeeScript</li>
-      <li>Tooling mit NPM, Gulp, Grunt, Webpack und Browserify</li>
-      <li>Versionierung mit Git und Subversion</li>
-      <li>Linux/Unix, Shell-Scripting, Vim</li>
-      <li>Grafik mit Photoshop, Illustrator, Sketch, InDesign und Inkscape</li>
-      <li>Typografie-Know-How</li>
-    </ul>
+    <Section1/>
   </Section>
   <Section title={frontmatter.sections[2]} side="2">
-    <p>
-      Ich arbeite am Liebsten interdisziplinär zusammen mit Kreativen und begleite frühestmöglich Konzept und Design, um eine optimale User Experience zu erreichen. Dazu gehören selbstverständlich beste Performance, intuitive Bedienbarkeit und Konsistenz im Design.
-    </p>
-    <h2>Styleguide Driven Development</h2>
-    <p>
-      Um das zu erreichen, setze ich gerne auf Living Style Guides und Pattern Libraries. Damit ist <a href="http://atomicdesign.bradfrost.com/" target="_blank">Atomic Design</a> möglich, eine Vorgehensweise, die ein gemeinsames Vokabular für UI-Elemente und damit besseres gegenseitiges Verständnis mit sich bringt. Gleichzeitig erleichtert sie ein iteratives Arbeiten und minimiert unbeabsichtigte Überraschungen. Außerdem wird damit eine solide <a href="#css-architektur">CSS Architektur</a> begünstigt, die stets aktuell dokumentiert ist.
-    </p>
-    <h2>Prototyping und Nutzertests</h2>
-    <p>
-      Um Ideen zu verproben und die Akzeptanz durch Nutzer zu prüfen, sind Nutzertests sehr attraktiv. Prototypen sollten für einen Nutzertest schnell erstellt und trotzdem nah am echten Produkt sein. Ich habe vielfach Nutzertests begleitet und weiß, worauf es dabei ankommt. Nicht zuletzt kann ich mich dadurch auch gut in den Nutzer hineinversetzen und kann einschätzen, wie ein tolles Nurzererlebnis erreicht werden kann.
-    </p>
+    <Section2/>
   </Section>
   <Section title={frontmatter.sections[3]} side="3">
-    <p>
-      Kann man mit Bootstrap jedes Projekt umsetzen? Vielleicht, aber sinnvoll ist das in der Regel nicht. Jedes Projekt, jedes Team und jeder Kunde hat individuelle Anforderungen und braucht deshalb eine Architektur, die zu ihm passt.
-    </p>
-    <p>
-      Best Practices ändern sich und werden manchmal sogar zu Anti-Patterns. Ich habe verschiedene Trends erlebt und auf Herz und Nieren prüfen können. Daher unterwerfe ich mich nicht den neuesten Trends, sondern schaue, welcher Ansatz am besten passt, sei es BEM, Atomic CSS, CSS Modules oder etwas anderes.
-    </p>
-    <h2>Case Studies</h2>
-    <p>
-      Die Web-App von <a href="https://www.lovoo.com" target="_blank">LOVOO</a> beispielsweise wurde ursprünglich mit Bootstrap umgesetzt, welches aber bald an die Grenzen seiner Skalierbarkeit kam. Ich habe <a href="http://styleguide.sc5.io/">SC5 Style Guide</a> implementiert und darin eine besonders flexible Pattern Library nach <a href="http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/" target="_blank">BEM, ITCSS</a> und Atomic-CSS-Prinzipien aufgebaut. So konnten für eine bessere Performance große Teile von Bootstrap entfernt werden. A-B-Tests und zielgenaues Tuning sind nun einfacher und klarer, ohne dass die Konsistenz leidet.
-    </p>
-    <p>
-      Auch bei SinnerSchrader konnte ich in zahlreichen Projekten unterschiedlicher Größe und Lebensdauer viel Erfahrung sammeln. Dort habe ich unter anderem die Themen OOCSS und Styleguide Driven Development vorangetrieben und am firmeneigenen Component Library Framework <a href="https://github.com/sinnerschrader/patternplate" target="_blank">Patternplate</a> mitgearbeitet. Dieses wurde nach Erfahrungen mit anderen Ansätzen wie StyleDocco, KSS, Fabricator und PatternLab in enger Zusammenarbeit mit Konzeptern, Designern und Kunden entwickelt und wird als <a href="#open-source">Open-Source-Projekt</a> kontinuierlich weiterentwickelt.
-    </p>
+    <Section3/>
   </Section>
   <Section title={frontmatter.sections[4]} side="4">
-    <p>
-      Vor allem im JavaScript-Umfeld ist Open Source nicht wegzudenken: Die NPM Registry bietet Zugriff auf unzählige fokussierte Module. Diese lassen sich wie Legosteine kombinieren und haben oft nur eine kleine Einstiegshürde zur Mitarbeit. Gibt es einen Bug oder fehlt ein Feature, scheue ich mich nicht, ein Projekt zu forken und einen Pull-Request zu stellen.
-    </p>
-    <p>
-      Ich bin ein großer Freund dieser Composability, weil damit die Gefahr des Vendor Lock-Ins deutlich geringer ist. Nicht mehr gepflegte Komponenten können gezielt ersetzt werden und erlerntes Wissen lässt sich universell einsetzen, da man Design Patterns statt Domain Specific Languages lernt. Nicht zuletzt aus diesem Grund arbeite ich lieber mit fokussierten Libraries wie React als mit in sich geschlossenen Frameworks wie AngularJS.
-    </p>
-    <h2>Open Source by you and me</h2>
-    <p>
-      Eine ausgeprägte Open-Source-Kultur schätze ich auch sehr bei meinem potenziellen Arbeitgeber: Wird intern ein universell einsetzbares Projekt entwickelt, sollte es veröffentlicht werden. Das bringt viele Chancen mit sich: Es wird besser, weil sich mehr Menschen beteiligen können, es gibt Einsicht in den Entwicklungs-Stil des Unternehmens und macht es so für potenzielle neue Mitarbeiter sympathisch, und bringt Bekanntheit und Vertrauen für die Firma. Die zusätzlich benötigte Zeit und Verantwortung zur Maintainance von Open-Source-Projekten ist nicht zu unterschätzen, aber die Vorteile sind den Mehraufwand in der Regel wert. <a href="https://github.com/sinnerschrader/patternplate" target="_blank">Patternplate</a> ist ein gutes Beispiel meines ehemaligen Arbeitgebers SinnerSchrader. Diese Website habe ich übrigens mit <a href="https://github.com/sinnerschrader/schlump" target="_blank">Schlump</a> erstellt, einem frischen Projekt meiner ehemaligen Kollegen.
-    </p>
-    <p>
-      Einen Eindruck über meine Open-Source-Aktivitäten können Sie sich <a href="https://github.com/levito" target="_blank">auf meinem GitHub-Profil</a> verschaffen.
-    </p>
+    <Section4/>
   </Section>
   <Section title={frontmatter.sections[5]} side="5">
-    <h2>Domainbetreiber/-inhaber</h2>
-    <p>
-      Veit Lehmann<br/>
-      Käthe-Kollwitz-Ufer 27<br/>
-      01307 Dresden<br/>
-      <a href="mailto:post@veitlehmann.de">post@veitlehmann.de</a>
-    </p>
-    <h2>Inhaltlich verantwortlich gemäß § 6 MDStV</h2>
-    <p>Veit Lehmann, Anschrift wie oben</p>
-    <h2>Haftungshinweis</h2>
-    <p>
-      Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich. Die Angaben in diesem Dienst wurden sorgfältig geprüft und entsprechen dem jeweils neuesten Stand. Dennoch kann keine Garantie für die Vollständigkeit, Richtigkeit und Aktualität übernommen werden.
-    </p>
+    <Section5/>
   </Section>
 </Layout>

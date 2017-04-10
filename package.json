@@ -9,7 +9,7 @@
     "sass-lint": "sass-lint -vq src/**/*.scss",
     "autoprefixer": "autoprefixer-cli --no-inline-map dist/statics/index.css",
     "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
-    "watch-html": "nodemon -w src -e html,js -x 'npm run schlump'",
+    "watch-html": "nodemon -w src -e html,md,js -x 'npm run schlump'",
     "watch-sass": "nodemon -w src -e scss -x 'npm run sass-lint & npm run sass'",
     "clean": "rimraf dist",
     "watch": "npm run clean && npm run watch-html & npm run watch-sass",
@@ -29,12 +29,12 @@
   "homepage": "https://github.com/levito/veitlehmann.de#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.17.5",
-    "clean-css": "^3.4.20",
-    "node-sass": "^3.10.1",
+    "browser-sync": "^2.18.8",
+    "clean-css": "^4.0.11",
+    "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
-    "rimraf": "^2.5.4",
-    "sass-lint": "^1.9.1",
-    "schlump": "^0.12.0"
+    "rimraf": "^2.6.1",
+    "sass-lint": "^1.10.2",
+    "schlump": "^0.17.0"
   }
 }

@@ -1,0 +1,9 @@
+Vor allem im JavaScript-Umfeld ist Open Source nicht wegzudenken: Die NPM Registry bietet Zugriff auf unzählige fokussierte Module. Diese lassen sich wie Legosteine kombinieren und haben oft nur eine kleine Einstiegshürde zur Mitarbeit. Gibt es einen Bug oder fehlt ein Feature, scheue ich mich nicht, ein Projekt zu forken und einen Pull-Request zu stellen.
+
+Ich bin ein großer Freund dieser Composability, weil damit die Gefahr des Vendor Lock-Ins deutlich geringer ist. Nicht mehr gepflegte Komponenten können gezielt ersetzt werden und erlerntes Wissen lässt sich universell einsetzen, da man Design Patterns statt Domain Specific Languages lernt. Nicht zuletzt aus diesem Grund arbeite ich lieber mit fokussierten Libraries wie React als mit in sich geschlossenen Frameworks wie AngularJS.
+
+## Open Source by you and me
+
+Eine ausgeprägte Open-Source-Kultur schätze ich auch sehr bei meinem potenziellen Arbeitgeber: Wird intern ein universell einsetzbares Projekt entwickelt, sollte es veröffentlicht werden. Das bringt viele Chancen mit sich: Es wird besser, weil sich mehr Menschen beteiligen können, es gibt Einsicht in den Entwicklungs-Stil des Unternehmens und macht es so für potenzielle neue Mitarbeiter sympathisch, und bringt Bekanntheit und Vertrauen für die Firma. Die zusätzlich benötigte Zeit und Verantwortung zur Maintainance von Open-Source-Projekten ist nicht zu unterschätzen, aber die Vorteile sind den Mehraufwand in der Regel wert. [Patternplate](https://github.com/sinnerschrader/patternplate) ist ein gutes Beispiel meines ehemaligen Arbeitgebers SinnerSchrader. Diese Website habe ich übrigens mit [Schlump](https://github.com/sinnerschrader/schlump) erstellt, einem frischen Projekt meiner ehemaligen Kollegen.
+
+Einen Eindruck über meine Open-Source-Aktivitäten können Sie sich [auf meinem GitHub-Profil](https://github.com/levito) verschaffen.

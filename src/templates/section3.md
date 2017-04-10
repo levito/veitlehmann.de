@@ -1,0 +1,9 @@
+Kann man mit Bootstrap jedes Projekt umsetzen? Vielleicht, aber sinnvoll ist das in der Regel nicht. Jedes Projekt, jedes Team und jeder Kunde hat individuelle Anforderungen und braucht deshalb eine Architektur, die zu ihm passt.
+
+Best Practices ändern sich und werden manchmal sogar zu Anti-Patterns. Ich habe verschiedene Trends erlebt und auf Herz und Nieren prüfen können. Daher unterwerfe ich mich nicht den neuesten Trends, sondern schaue, welcher Ansatz am besten passt, sei es BEM, Atomic CSS, CSS Modules oder etwas anderes.
+
+## Case Studies
+
+Die Web-App von [LOVOO](https://www.lovoo.com) beispielsweise wurde ursprünglich mit Bootstrap umgesetzt, welches aber bald an die Grenzen seiner Skalierbarkeit kam. Ich habe [SC5 Style Guide](http://styleguide.sc5.io/) implementiert und darin eine besonders flexible Pattern Library nach [BEM, ITCSS](http://csswizardry.com/2015/08/bemit-taking-the-bem-naming-convention-a-step-further/) und Atomic-CSS-Prinzipien aufgebaut. So konnten für eine bessere Performance große Teile von Bootstrap entfernt werden. A-B-Tests und zielgenaues Tuning sind nun einfacher und klarer, ohne dass die Konsistenz leidet.
+
+Auch bei SinnerSchrader konnte ich in zahlreichen Projekten unterschiedlicher Größe und Lebensdauer viel Erfahrung sammeln. Dort habe ich unter anderem die Themen OOCSS und Styleguide Driven Development vorangetrieben und am firmeneigenen Component Library Framework [Patternplate](https://github.com/sinnerschrader/patternplate) mitgearbeitet. Dieses wurde nach Erfahrungen mit anderen Ansätzen wie StyleDocco, KSS, Fabricator und PatternLab in enger Zusammenarbeit mit Konzeptern, Designern und Kunden entwickelt und wird als [Open-Source-Projekt](#open-source) kontinuierlich weiterentwickelt.
