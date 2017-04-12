@@ -1,12 +1,11 @@
 Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl im Agentur- als auch im Startup-Umfeld. Meine Wurzeln habe ich im Design, heute bin ich Frontend Entwickler mit starkem Fokus auf [Design und User Experience](#user-experience). Meine Stärken habe ich besonders im Bereich der [CSS Architektur](#css-architektur).
 
-## Let’s work together!
-
-Aktuell bin ich auf der Suche nach einem neuen Job, idealerweise in Hamburg. [Kontaktieren Sie mich](mailto:post@veitlehmann.de), wenn Sie mit mir zusammenarbeiten wollen, gern auch über [LinkedIn](https://www.linkedin.com/in/veitlehmann) oder [XING](https://www.xing.com/profile/Veit_Lehmann).
-
 ## Meine beruflichen Stationen
 
 <dl class="cv">
+  <dt>Seit 02/2017</dt>
+  <dd>AIDA Cruises, Costa Digital Unit<br />
+  Senior Frontend Developer</dd>
   <dt>12/2015 – 01/2017</dt>
   <dd>LOVOO GmbH<br />
   Senior Frontend Developer</dd>
