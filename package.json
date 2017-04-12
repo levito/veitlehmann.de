@@ -30,7 +30,7 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.18.8",
-    "clean-css": "^4.0.11",
+    "clean-css-cli": "^4.0.11",
     "node-sass": "^4.5.2",
     "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
