@@ -116,6 +116,10 @@ body {
   width: 100%;
   min-height: 100vh;
   padding: 8rem 6vw;
+
+  .section--0 & {
+    height: 100vh;
+  }
 }
 
 .section__content {
