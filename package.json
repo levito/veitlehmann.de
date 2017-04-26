@@ -9,8 +9,8 @@
     "sass-lint": "sass-lint -vq src/**/*.scss",
     "autoprefixer": "autoprefixer-cli --no-inline-map dist/statics/index.css",
     "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
-    "watch-html": "nodemon -w src -e html,md,js -x 'npm run schlump'",
-    "watch-sass": "nodemon -w src -e scss -x 'npm run sass-lint & npm run sass'",
+    "watch-html": "chokidar 'src/**/*.{html,md,js}' --initial -c 'npm run schlump'",
+    "watch-sass": "chokidar 'src/**/*.scss' --initial -c 'npm run sass-lint & npm run sass'",
     "clean": "rimraf dist",
     "watch": "npm run clean && npm run watch-html & npm run watch-sass",
     "serve": "npm run watch & browser-sync start -s dist -f dist --no-notify --no-open",
@@ -30,9 +30,9 @@
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.18.8",
+    "chokidar-cli": "^1.2.0",
     "clean-css-cli": "^4.0.11",
     "node-sass": "^4.5.2",
-    "nodemon": "^1.11.0",
     "rimraf": "^2.6.1",
     "sass-lint": "^1.10.2",
     "schlump": "^0.17.0"
