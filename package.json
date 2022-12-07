@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "schlump": "schlump",
-    "sass": "node-sass --source-map-embed --include-path scss src/styles/index.scss dist/statics/index.css",
+    "sass": "sass --embed-source-map --load-path=scss src/styles/index.scss dist/statics/index.css",
     "sass-lint": "sass-lint -vq src/**/*.scss",
-    "autoprefixer": "autoprefixer-cli --no-inline-map dist/statics/index.css",
+    "autoprefixer": "postcss dist/statics/index.css --no-map --replace --use autoprefixer",
     "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
     "watch-html": "chokidar 'src/**/*.{html,md,js}' --initial -c 'npm run schlump'",
     "watch-sass": "chokidar 'src/**/*.scss' --initial -c 'npm run sass-lint & npm run sass'",
@@ -28,13 +28,15 @@
   },
   "homepage": "https://github.com/levito/veitlehmann.de#readme",
   "devDependencies": {
-    "autoprefixer-cli": "^1.0.0",
-    "browser-sync": "^2.18.8",
-    "chokidar-cli": "^1.2.0",
-    "clean-css-cli": "^4.0.11",
-    "node-sass": "^4.5.2",
-    "rimraf": "^2.6.1",
-    "sass-lint": "^1.10.2",
+    "autoprefixer": "^10.4.13",
+    "browser-sync": "^2.27.10",
+    "chokidar-cli": "^3.0.0",
+    "clean-css-cli": "^5.6.1",
+    "postcss": "^8.4.19",
+    "postcss-cli": "^10.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.56.1",
+    "sass-lint": "^1.13.1",
     "schlump": "^0.17.0"
   }
 }
