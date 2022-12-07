@@ -1,7 +1,7 @@
 ## Domainbetreiber/-inhaber
 
 Veit Lehmann  
-Stahltwiete 17c  
+Norburger Stieg 6  
 22761 Hamburg  
 [post@veitlehmann.de](mailto:post@veitlehmann.de)
 

@@ -3,7 +3,10 @@ Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl
 ## Meine beruflichen Stationen
 
 <dl class="cv">
-  <dt>Seit 02/2017</dt>
+  <dt>Seit 02/2021</dt>
+  <dd>Jimdo GmbH<br />
+  Senior Frontend Engineer</dd>
+  <dt>02/2017 – 01/2021</dt>
   <dd>AIDA Cruises, Costa Digital Unit<br />
   Senior Frontend Developer</dd>
   <dt>12/2015 – 01/2017</dt>
