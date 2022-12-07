@@ -286,4 +286,33 @@ body {
   .target--5:target ~ .world .cube {
     @include vmax(transform, #{'translateZ('}, #{') rotateX(-180deg)'}, -50);
   }
+
+  .is-flat {
+    svg {
+      pointer-events: none;
+    }
+
+    .world,
+    .cube,
+    .section {
+      transform: none !important;
+    }
+
+    .section--0,
+    .target--1:target ~ .world .section--1,
+    .target--2:target ~ .world .section--2,
+    .target--3:target ~ .world .section--3,
+    .target--4:target ~ .world .section--4,
+    .target--5:target ~ .world .section--5 {
+      z-index: 1;
+    }
+  }
+
+  .is-static {
+    .world,
+    .cube {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
 }
