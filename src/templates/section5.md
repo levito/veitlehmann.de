@@ -1,4 +1,4 @@
-## Domainbetreiber/-inhaber
+## Domainbetreiber&#8202;/<wbr/><nobr>-inhaber</nobr>
 
 Veit Lehmann  
 Norburger Stieg 6  

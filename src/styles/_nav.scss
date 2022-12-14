@@ -10,6 +10,13 @@
   opacity: 1;
   z-index: 1;
 
+  @media screen and (max-width: 800px) {
+    top: auto;
+    right: 2rem;
+    bottom: 2rem;
+    left: auto;
+  }
+
   svg {
     width: 4rem;
     height: 4rem;

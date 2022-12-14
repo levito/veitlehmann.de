@@ -36,7 +36,7 @@
 
 html {
   background: $color-offblack;
-  font-size: calc(12px + 4 * ((100vw - 400px) / 1000));
+  font-size: calc(10px + 5 * ((100vw - 400px) / 1000));
   box-sizing: border-box;
 
   @media screen and (max-width: 400px) {
@@ -115,10 +115,16 @@ body {
   flex-direction: column;
   width: 100%;
   min-height: 100vh;
-  padding: 8rem 6vw;
+  padding: 7rem calc(15vw - 3rem);
 
   .section--0 & {
     height: 100vh;
+  }
+
+  .section:not(.section--0) & {
+    @media screen and (max-width: 800px) {
+      padding-right: 7rem;
+    }
   }
 }
 
