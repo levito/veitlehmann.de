@@ -36,6 +36,7 @@
 
 html {
   background: $color-offblack;
+  color: $color-offwhite;
   font-size: calc(10px + 5 * ((100vw - 400px) / 1000));
   box-sizing: border-box;
 
@@ -107,7 +108,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $color-offwhite;
 }
 
 .section__body {
@@ -184,16 +184,10 @@ body {
 .footer {
   color: $color-silver;
   font-size: 1.2rem;
-  font-weight: inherit;
   text-align: center;
 }
 
 @supports (transform-style: preserve-3d) {
-  html,
-  body {
-    overflow: hidden;
-  }
-
   body {
     display: flex;
     position: fixed;
@@ -294,10 +288,6 @@ body {
   }
 
   .is-flat {
-    svg {
-      pointer-events: none;
-    }
-
     .world,
     .cube,
     .section {
