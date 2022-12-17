@@ -54,6 +54,18 @@ body {
   font: normal normal 300 1.5em/1.5 Rubik, Helvetica Neue, Helvetica, sans-serif;
 }
 
+a {
+  transition: text-decoration-color .5s;
+  text-decoration: underline;
+  text-decoration-color: fade-out($color-offwhite, .5);
+  text-decoration-thickness: .2rem;
+
+  &:hover {
+    transition: text-decoration-color .2s;
+    text-decoration-color: $color-offwhite;
+  }
+}
+
 .link {
   transition: color .5s;
   text-decoration: none;
