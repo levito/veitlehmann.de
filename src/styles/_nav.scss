@@ -1,14 +1,19 @@
 @import 'variables';
 
 .home {
-  position: absolute;
+  position: fixed;
   z-index: 1;
   top: 2rem;
   left: 2rem;
-  transform: scale(0);
-  transition: transform .2s 1s cubic-bezier(.175, .885, .32, 1.275), opacity 1s 1s;
-  opacity: 1;
   color: $color-offwhite;
+  
+  @supports (transform-style: preserve-3d) {
+    @media (prefers-reduced-motion: no-preference) {
+      opacity: 1;
+      transform: scale(0);
+      transition: transform .2s 1s cubic-bezier(.175, .885, .32, 1.275), opacity 1s 1s;
+    }
+  }
 
   @media screen and (max-width: 800px) {
     top: auto;

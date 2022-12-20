@@ -1,7 +1,10 @@
 ;(function () {
   var cssSupports = (window.CSS || {}).supports || function () {}
+  var mediaQuery = window.matchMedia
+    ? window.matchMedia('(prefers-reduced-motion: reduce)')
+    : {}
 
-  if (!cssSupports('transform-style', 'preserve-3d')) {
+  if (!cssSupports('transform-style', 'preserve-3d') || mediaQuery.matches) {
     var sections = document.querySelectorAll('.js_section')
     var targets = document.querySelectorAll('.js_target')
 

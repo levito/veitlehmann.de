@@ -168,9 +168,11 @@ a {
     justify-content: center;
   }
 
-  .section__intro,
-  .footer {
-    animation: appear 1.5s ease-out;
+  @media (prefers-reduced-motion: no-preference) {
+    .section__intro,
+    .footer {
+      animation: appear 1.5s ease-out;
+    }
   }
 }
 
@@ -201,127 +203,129 @@ a {
 }
 
 @supports (transform-style: preserve-3d) {
-  body {
-    display: flex;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .world {
-    @include vmax(width);
-    @include vmax(min-width);
-    @include vmax(height);
-    @include vmax(perspective);
-    position: relative;
-  }
-
-  .cube,
-  .section {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
-
-  .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateY(0deg)'}, -50);
-    transform-style: preserve-3d;
-    transition: transform 1s ease;
-  }
-
-  .section {
-    overflow: hidden;
-    backface-visibility: hidden;
-  }
-
-  .section__body {
-    width: 100vw;
-    height: 100vh;
-    overflow: auto;
-  }
-
-  .section--0 {
-    @include vmax(transform, #{'translateZ('}, #{')'}, 50);
-  }
-
-  .section--1 {
-    @include vmax(transform, #{'rotateX(90deg) translateZ('}, #{')'}, 50);
-  }
-
-  .section--2 {
-    @include vmax(transform, #{'rotateY(-90deg) translateZ('}, #{')'}, 50);
-  }
-
-  .section--3 {
-    @include vmax(transform, #{'rotateY(90deg) translateZ('}, #{')'}, 50);
-  }
-
-  .section--4 {
-    @include vmax(transform, #{'rotateX(-90deg) translateZ('}, #{')'}, 50);
-  }
-
-  .section--5 {
-    @include vmax(transform, #{'rotateX(180deg) translateZ('}, #{')'}, 50);
-  }
-
-  .target {
-    display: none;
-
-    &:target {
-      ~ .world {
-        animation: zoom 1s ease-in-out;
-      }
+  @media (prefers-reduced-motion: no-preference) {
+    body {
+      display: flex;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      align-items: center;
+      justify-content: center;
     }
-  }
 
-  .target--1:target ~ .world .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateX(-90deg)'}, -50);
-  }
+    .world {
+      @include vmax(width);
+      @include vmax(min-width);
+      @include vmax(height);
+      @include vmax(perspective);
+      position: relative;
+    }
 
-  .target--2:target ~ .world .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateY(90deg)'}, -50);
-  }
-
-  .target--3:target ~ .world .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateY(-90deg)'}, -50);
-  }
-
-  .target--4:target ~ .world .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateX(90deg)'}, -50);
-  }
-
-  .target--5:target ~ .world .cube {
-    @include vmax(transform, #{'translateZ('}, #{') rotateX(-180deg)'}, -50);
-  }
-
-  .is-flat {
-    .world,
     .cube,
     .section {
-      transform: none !important;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
     }
 
-    .section--0,
-    .target--1:target ~ .world .section--1,
-    .target--2:target ~ .world .section--2,
-    .target--3:target ~ .world .section--3,
-    .target--4:target ~ .world .section--4,
-    .target--5:target ~ .world .section--5 {
-      z-index: 1;
-    }
-  }
-
-  .is-static {
-    .world,
     .cube {
-      transition: none !important;
-      animation: none !important;
+      @include vmax(transform, #{'translateZ('}, #{') rotateY(0deg)'}, -50);
+      transform-style: preserve-3d;
+      transition: transform 1s ease;
+    }
+
+    .section {
+      overflow: hidden;
+      backface-visibility: hidden;
+    }
+
+    .section__body {
+      width: 100vw;
+      height: 100vh;
+      overflow: auto;
+    }
+
+    .section--0 {
+      @include vmax(transform, #{'translateZ('}, #{')'}, 50);
+    }
+
+    .section--1 {
+      @include vmax(transform, #{'rotateX(90deg) translateZ('}, #{')'}, 50);
+    }
+
+    .section--2 {
+      @include vmax(transform, #{'rotateY(-90deg) translateZ('}, #{')'}, 50);
+    }
+
+    .section--3 {
+      @include vmax(transform, #{'rotateY(90deg) translateZ('}, #{')'}, 50);
+    }
+
+    .section--4 {
+      @include vmax(transform, #{'rotateX(-90deg) translateZ('}, #{')'}, 50);
+    }
+
+    .section--5 {
+      @include vmax(transform, #{'rotateX(180deg) translateZ('}, #{')'}, 50);
+    }
+
+    .target {
+      display: none;
+
+      &:target {
+        ~ .world {
+          animation: zoom 1s ease-in-out;
+        }
+      }
+    }
+
+    .target--1:target ~ .world .cube {
+      @include vmax(transform, #{'translateZ('}, #{') rotateX(-90deg)'}, -50);
+    }
+
+    .target--2:target ~ .world .cube {
+      @include vmax(transform, #{'translateZ('}, #{') rotateY(90deg)'}, -50);
+    }
+
+    .target--3:target ~ .world .cube {
+      @include vmax(transform, #{'translateZ('}, #{') rotateY(-90deg)'}, -50);
+    }
+
+    .target--4:target ~ .world .cube {
+      @include vmax(transform, #{'translateZ('}, #{') rotateX(90deg)'}, -50);
+    }
+
+    .target--5:target ~ .world .cube {
+      @include vmax(transform, #{'translateZ('}, #{') rotateX(-180deg)'}, -50);
+    }
+
+    .is-flat {
+      .world,
+      .cube,
+      .section {
+        transform: none !important;
+      }
+
+      .section--0,
+      .target--1:target ~ .world .section--1,
+      .target--2:target ~ .world .section--2,
+      .target--3:target ~ .world .section--3,
+      .target--4:target ~ .world .section--4,
+      .target--5:target ~ .world .section--5 {
+        z-index: 1;
+      }
+    }
+
+    .is-static {
+      .world,
+      .cube {
+        transition: none !important;
+        animation: none !important;
+      }
     }
   }
 }
