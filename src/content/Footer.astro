@@ -1,0 +1,12 @@
+---
+import Link from '../components/Link.astro'
+import { sections } from './content.astro'
+
+const year = new Date().getFullYear()
+const id = 5
+const linkText = sections[id].frontmatter?.title
+---
+
+<footer class="footer">
+  Copyright &copy; {year} Veit Lehmann &middot; <Link id={id} text={linkText} />
+</footer>

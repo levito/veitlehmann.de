@@ -1,21 +1,15 @@
 {
   "name": "veitlehmann",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "My website",
   "main": "index.js",
   "scripts": {
-    "schlump": "schlump",
-    "sass": "sass --embed-source-map --load-path=scss src/styles/index.scss dist/statics/index.css",
-    "sass-lint": "sass-lint -vq src/**/*.scss",
-    "autoprefixer": "postcss dist/statics/index.css --no-map --replace --use autoprefixer",
-    "cleancss": "cleancss -o dist/statics/index.css dist/statics/index.css",
-    "watch-html": "chokidar 'src/**/*.{html,md,js}' --initial -c 'npm run schlump'",
-    "watch-sass": "chokidar 'src/**/*.scss' --initial -c 'npm run sass-lint & npm run sass'",
-    "clean": "rimraf dist",
-    "watch": "npm run clean && npm run watch-html & npm run watch-sass",
-    "serve": "npm run watch & browser-sync start -s dist -f dist --no-notify --no-open",
-    "build": "npm run clean && npm run sass && npm run autoprefixer && npm run cleancss && npm run schlump",
-    "start": "npm run serve"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "stylelint src/styles/**/*.scss",
+    "astro": "astro"
   },
   "repository": {
     "type": "git",
@@ -26,17 +20,16 @@
   "bugs": {
     "url": "https://github.com/levito/veitlehmann.de/issues"
   },
-  "homepage": "https://github.com/levito/veitlehmann.de#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "browser-sync": "^2.27.10",
-    "chokidar-cli": "^3.0.0",
-    "clean-css-cli": "^5.6.1",
-    "postcss": "^8.4.19",
-    "postcss-cli": "^10.1.0",
-    "rimraf": "^3.0.2",
-    "sass": "^1.56.1",
-    "sass-lint": "^1.13.1",
-    "schlump": "^0.17.0"
+  "homepage": "https://veitlehmann.de",
+  "stylelint": {
+    "extends": "stylelint-config-property-sort-order-smacss",
+    "customSyntax": "postcss-scss"
+  },
+  "dependencies": {
+    "astro": "^1.7.2",
+    "postcss-scss": "^4.0.6",
+    "sass": "^1.57.1",
+    "stylelint": "^14.16.0",
+    "stylelint-config-property-sort-order-smacss": "^9.0.0"
   }
 }

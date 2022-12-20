@@ -1,4 +1,8 @@
-Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl im Agentur- als auch im Startup-Umfeld. Meine Wurzeln habe ich im Design, heute bin ich Frontend Entwickler mit starkem Fokus auf [Design und User Experience](#user-experience). Meine Stärken habe ich besonders im Bereich der [CSS Architektur](#css-architektur).
+---
+title: Frontend Entwickler
+---
+
+Ich habe über <Link>10 Jahre</Link> Erfahrung in der professionellen Web-Entwicklung, sowohl im Agentur- als auch im Startup-Umfeld. Meine Wurzeln habe ich im Design, heute bin ich Frontend Entwickler mit starkem Fokus auf [Design und User Experience](#user-experience). Meine Stärken habe ich besonders im Bereich der [CSS Architektur](#css-architektur).
 
 ## Meine beruflichen Stationen
 
@@ -6,7 +10,7 @@ Ich habe über 10 Jahre Erfahrung in der professionellen Web-Entwicklung, sowohl
   <dt>Seit 02/2021</dt>
   <dd>Jimdo GmbH<br />
   Senior Frontend Engineer</dd>
-  <dt>02/2017 – 01/2021</dt>
+  <dt>02/2017 – 01/2021</dt>
   <dd>AIDA Cruises, Costa Digital Unit<br />
   Senior Frontend Developer</dd>
   <dt>12/2015 – 01/2017</dt>

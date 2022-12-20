@@ -1,0 +1,12 @@
+---
+import { slugify } from '../utils'
+
+export type Props = {
+  text?: string
+  id: number
+}
+
+const { text, id } = Astro.props
+---
+
+<a href={`#${slugify(text)}`} class={`link link--${id}`}>{text}</a>

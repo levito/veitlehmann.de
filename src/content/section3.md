@@ -1,3 +1,7 @@
+---
+title: CSS Architektur
+---
+
 Kann man mit Bootstrap jedes Projekt umsetzen? Vielleicht, aber sinnvoll ist das in der Regel nicht. Jedes Projekt, jedes Team und jeder Kunde hat individuelle Anforderungen und braucht deshalb eine Architektur, die zu ihm passt.
 
 Best Practices ändern sich und werden manchmal sogar zu Anti-Patterns. Ich habe verschiedene Trends erlebt und auf Herz und Nieren prüfen können. Daher unterwerfe ich mich nicht den neuesten Trends, sondern schaue, welcher Ansatz am besten passt, sei es BEM, Atomic CSS, CSS Modules oder etwas anderes.

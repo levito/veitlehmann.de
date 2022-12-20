@@ -2,13 +2,13 @@
 
 .home {
   position: absolute;
+  z-index: 1;
   top: 2rem;
   left: 2rem;
   transform: scale(0);
   transition: transform .2s 1s cubic-bezier(.175, .885, .32, 1.275), opacity 1s 1s;
-  color: $color-offwhite;
   opacity: 1;
-  z-index: 1;
+  color: $color-offwhite;
 
   @media screen and (max-width: 800px) {
     top: auto;

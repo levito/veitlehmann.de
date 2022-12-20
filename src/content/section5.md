@@ -1,3 +1,7 @@
+---
+title: Impressum
+---
+
 ## Domainbetreiber&#8202;/<wbr/><nobr>-inhaber</nobr>
 
 Veit Lehmann  

@@ -1,0 +1,17 @@
+---
+import type { SectionData } from '../content/content.astro'
+import { slugify } from '../utils'
+
+export type Props = {
+  sections: SectionData[]
+}
+
+const { sections } = Astro.props
+const targets = sections.map(({ frontmatter }) => slugify(frontmatter?.title))
+---
+
+{
+  targets.map((target, i) =>
+    target ? <a id={target} class={`js_target target target--${i}`} /> : null,
+  )
+}

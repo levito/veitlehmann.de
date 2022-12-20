@@ -16,7 +16,7 @@
 
 @keyframes appear {
   0% {
-    transform: translateY(3rem);
+    transform: translateY(1em);
     opacity: 0;
   }
 
@@ -35,10 +35,10 @@
 }
 
 html {
+  box-sizing: border-box;
   background: $color-offblack;
   color: $color-offwhite;
   font-size: calc(10px + 5 * ((100vw - 400px) / 1000));
-  box-sizing: border-box;
 
   @media screen and (max-width: 400px) {
     font-size: 10px;
@@ -168,7 +168,8 @@ a {
     justify-content: center;
   }
 
-  .section__intro {
+  .section__intro,
+  .footer {
     animation: appear 1.5s ease-out;
   }
 }

@@ -1,0 +1,12 @@
+---
+import Link from '../components/Link.astro'
+import { sections } from './content.astro'
+
+const links = sections.map(({ frontmatter }) => frontmatter?.title)
+---
+
+<p class="section__intro">
+  Hallo, ich bin Veit Lehmann, <Link id={1} text={links[1]} />
+  mit einer Passion für <Link id={2} text={links[2]} />,
+  <Link id={3} text={links[3]} /> und <Link id={4} text={links[4]} />.
+</p>

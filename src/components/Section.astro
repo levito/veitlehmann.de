@@ -1,0 +1,20 @@
+---
+import type { SectionData } from '../content/content.astro'
+
+export type Props = SectionData & {
+  side: number
+}
+
+const { Content, Footer, side, frontmatter } = Astro.props
+const title = frontmatter?.title
+---
+
+<section class={`js_section section section--${side}`}>
+  <div class="section__body js_section__body">
+    <div class="section__content">
+      {title ? <h1 class="section__title">{title}</h1> : null}
+      <Content />
+    </div>
+    {Footer ? <Footer /> : null}
+  </div>
+</section>

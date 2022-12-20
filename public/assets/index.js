@@ -14,6 +14,7 @@
 
   var html = document.documentElement
   var sectionBodies = document.querySelectorAll('.js_section__body')
+  html.classList.add('is-flat', 'is-static')
 
   document.addEventListener('transitionend', function (e) {
     if (!e.target.matches('a')) {

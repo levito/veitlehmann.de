@@ -1,0 +1,45 @@
+---
+import Section from '../components/Section.astro'
+import Targets from '../components/Targets.astro'
+import type { SectionData } from '../content/content.astro'
+import '../styles/index.scss'
+
+export type Props = {
+  sections: SectionData[]
+  title: string
+}
+
+const { sections, title } = Astro.props
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{title}</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik:300,500"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <Targets sections={sections} />
+    <a href="#" class="home" title="Veit Lehmann - Home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+        <path
+          d="M32 0C14.327 0 0 14.327 0 32s14.327 32 32 32 32-14.327 32-32S49.673 0 32 0zm16 46H36V36h-.013c-.065-2.15-1.82-3.878-3.987-3.878S28.078 33.85 28.012 36H28v10H16V28l16-14 16 14v18z"
+        ></path>
+      </svg>
+    </a>
+    <div class="world">
+      <article class="cube">
+        {sections.map((section, i) => <Section {...section} side={i} />)}
+      </article>
+    </div>
+    <script src="/assets/index.js" is:inline></script>
+  </body>
+</html>

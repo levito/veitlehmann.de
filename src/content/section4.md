@@ -1,3 +1,7 @@
+---
+title: Open Source
+---
+
 Vor allem im JavaScript-Umfeld ist Open Source nicht wegzudenken: Die NPM Registry bietet Zugriff auf unzählige fokussierte Module. Diese lassen sich wie Legosteine kombinieren und haben oft nur eine kleine Einstiegshürde zur Mitarbeit. Gibt es einen Bug oder fehlt ein Feature, scheue ich mich nicht, ein Projekt zu forken und einen Pull-Request zu stellen.
 
 Ich bin ein großer Freund dieser Composability, weil damit die Gefahr des Vendor Lock-Ins deutlich geringer ist. Nicht mehr gepflegte Komponenten können gezielt ersetzt werden und erlerntes Wissen lässt sich universell einsetzen, da man Design Patterns statt Domain Specific Languages lernt. Nicht zuletzt aus diesem Grund arbeite ich lieber mit fokussierten Libraries wie React als mit in sich geschlossenen Frameworks wie AngularJS.
