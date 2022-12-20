@@ -1,7 +1,16 @@
 @import 'variables';
 
 a {
+  transition: text-decoration-color .5s;
   color: inherit;
+  text-decoration: underline;
+  text-decoration-color: fade-out($color-offwhite, .5);
+  text-decoration-thickness: .2rem;
+
+  &:hover {
+    transition: text-decoration-color .2s;
+    text-decoration-color: $color-offwhite;
+  }
 }
 
 h1,
