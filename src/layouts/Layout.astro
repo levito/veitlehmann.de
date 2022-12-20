@@ -1,6 +1,5 @@
 ---
 import Section from '../components/Section.astro'
-import Targets from '../components/Targets.astro'
 import type { SectionData } from '../content/content.astro'
 import '../styles/index.scss'
 
@@ -27,7 +26,6 @@ const { sections, title } = Astro.props
     />
   </head>
   <body>
-    <Targets sections={sections} />
     <a href="#" class="home" title="Veit Lehmann - Home">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
         <path
@@ -40,6 +38,6 @@ const { sections, title } = Astro.props
         {sections.map((section, i) => <Section {...section} side={i} />)}
       </article>
     </div>
-    <script src="/assets/index.js" is:inline></script>
+    <script src="../index.js"></script>
   </body>
 </html>

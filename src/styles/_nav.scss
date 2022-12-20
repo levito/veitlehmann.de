@@ -5,14 +5,13 @@
   z-index: 1;
   top: 2rem;
   left: 2rem;
+  opacity: .5;
   color: $color-offwhite;
-  
-  @supports (transform-style: preserve-3d) {
-    @media (prefers-reduced-motion: no-preference) {
-      opacity: 1;
-      transform: scale(0);
-      transition: transform .2s 1s cubic-bezier(.175, .885, .32, 1.275), opacity 1s 1s;
-    }
+
+  .is-3d & {
+    transform: scale(0);
+    transition: transform .2s 1s cubic-bezier(.175, .885, .32, 1.275), opacity 1s 1s;
+    opacity: 1;
   }
 
   @media screen and (max-width: 800px) {

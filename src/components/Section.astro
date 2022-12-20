@@ -1,5 +1,6 @@
 ---
 import type { SectionData } from '../content/content.astro'
+import { slugify } from '../utils'
 
 export type Props = SectionData & {
   side: number
@@ -9,7 +10,12 @@ const { Content, Footer, side, frontmatter } = Astro.props
 const title = frontmatter?.title
 ---
 
-<section class={`js_section section section--${side}`}>
+<section class={`section section--${side}`}>
+  {
+    title ? (
+      <a id={slugify(title)} class={`js_target target target--${side}`} />
+    ) : null
+  }
   <div class="section__body js_section__body">
     <div class="section__content">
       {title ? <h1 class="section__title">{title}</h1> : null}
