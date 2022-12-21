@@ -2,6 +2,9 @@
 dist/
 .output/
 
+# generated files
+types.generated.d.ts
+
 # dependencies
 node_modules/
 

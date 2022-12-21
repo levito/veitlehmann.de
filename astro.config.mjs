@@ -1,9 +1,10 @@
-import { defineConfig } from 'astro/config';
-
-// https://astro.build/config
-import mdx from "@astrojs/mdx";
+import mdx from '@astrojs/mdx'
+import { defineConfig } from 'astro/config'
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [mdx()]
-});
+  experimental: {
+    contentCollections: true,
+  },
+  integrations: [mdx()],
+})

@@ -1,9 +1,9 @@
 ---
-import Section, { type SectionData } from '../components/Section.astro'
-import '../styles/index.scss'
+import Section, { type SectionEntry } from 'src/components/Section.astro'
+import 'src/styles/index.scss'
 
 export type Props = {
-  sections: SectionData[]
+  sections: SectionEntry[]
   title: string
 }
 
@@ -37,6 +37,6 @@ const { sections, title } = Astro.props
         {sections.map((section, i) => <Section {...section} side={i} />)}
       </article>
     </div>
-    <script src="../index.js"></script>
+    <script src="src/index.js"></script>
   </body>
 </html>

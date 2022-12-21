@@ -1,0 +1,16 @@
+---
+import type { AstroComponentFactory } from 'astro/dist/runtime/server'
+
+export type Props = {
+  footerLink: AstroComponentFactory
+}
+
+const { footerLink: Link } = Astro.props
+---
+
+<div class="section__intro">
+  <p><slot /></p>
+</div>
+<footer class="footer">
+  Copyright &copy; {new Date().getFullYear()} Veit Lehmann &middot; <Link />
+</footer>

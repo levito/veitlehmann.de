@@ -1,12 +1,13 @@
 ---
-import { slugify } from '../utils'
-
 export type Props = {
-  text?: string
   id: number
+  links: Array<{
+    title?: string
+    slug: string
+  }>
 }
 
-const { text, id } = Astro.props
+const { id, links } = Astro.props
 ---
 
-<a href={`#${slugify(text)}`} class={`link link--${id}`}>{text}</a>
+<a href={`#${links[id].slug}`} class={`link link--${id}`}>{links[id].title}</a>
