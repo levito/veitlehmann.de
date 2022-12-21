@@ -1,6 +1,14 @@
 ---
-import type { SectionData } from '../content/content.astro'
+import type { AstroComponentFactory } from 'astro/dist/runtime/server'
 import { slugify } from '../utils'
+
+export type SectionData = {
+  Content: AstroComponentFactory
+  Footer?: AstroComponentFactory
+  frontmatter?: {
+    title?: string
+  }
+}
 
 export type Props = SectionData & {
   side: number

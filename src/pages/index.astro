@@ -1,8 +1,9 @@
 ---
-import { sections } from '../content/content.astro'
 import Layout from '../layouts/Layout.astro'
+import { getContent } from '../utils'
 
 const title = 'Veit Lehmann - Senior Frontend Entwickler'
+const { sections } = await getContent()
 ---
 
 <Layout title={title} sections={sections} />
