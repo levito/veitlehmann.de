@@ -1,11 +1,6 @@
 ---
 import Footer from '../content/Footer.astro'
 import Home from '../content/Home.astro'
-import * as section1 from '../content/section1.md'
-import * as section2 from '../content/section2.md'
-import * as section3 from '../content/section3.md'
-import * as section4 from '../content/section4.md'
-import * as section5 from '../content/section5.md'
 
 export type SectionData = {
   Content: any
@@ -14,12 +9,13 @@ export type SectionData = {
     title?: string
   }
 }
+
+export const markdownSections = await Promise.all(
+  Object.values(import.meta.glob<SectionData>('./*.md')).map((res) => res()),
+)
+
 export const sections: SectionData[] = [
   { Content: Home, Footer },
-  section1,
-  section2,
-  section3,
-  section4,
-  section5,
+  ...markdownSections,
 ]
 ---
