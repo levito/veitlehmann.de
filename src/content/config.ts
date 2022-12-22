@@ -1,9 +1,15 @@
 import { defineCollection, z } from 'astro:content'
 
+// importing from utils breaks generating types, so languages are exported here
+export const languages = ['de', 'en'] as const
+
 export const sections = defineCollection({
-  slug: ({ data }) => (data.title || '').toLowerCase().replace(/\s/g, '-'),
+  // prepare slug to be slugified with counter per language in utils
+  slug: ({ data }) => data.slug || data.title,
   schema: {
-    title: z.string().optional(),
+    lang: z.enum(languages).optional(),
+    slug: z.string().optional(),
+    title: z.string(),
   },
 })
 

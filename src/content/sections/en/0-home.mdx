@@ -1,0 +1,10 @@
+---
+layout: src/layouts/Home.astro
+title: English
+lang: en
+---
+
+import Link from 'src/components/Link.astro'
+export const link = (id) => <Link intro id={id} lang={frontmatter.lang} />
+
+Hi, I’m Veit Lehmann, {link(1)} with a passion for {link(2)}, {link(3)} and {link(4)}.

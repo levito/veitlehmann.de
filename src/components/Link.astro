@@ -1,13 +1,16 @@
 ---
+import { defaultLanguage, getContent, Language } from 'src/utils'
+
 export type Props = {
   id: number
-  links: Array<{
-    title?: string
-    slug: string
-  }>
+  intro?: boolean
+  lang: Language
 }
 
-const { id, links } = Astro.props
+const { id, intro, lang } = Astro.props
+const { slug, title } = (await getContent(lang || defaultLanguage)).links[id]
+const className = intro ? `link link--${id}` : null
+const href = id > 0 ? `#${slug}` : `/${lang}`
 ---
 
-<a href={`#${links[id].slug}`} class={`link link--${id}`}>{links[id].title}</a>
+<a href={href} class={className}><slot>{title}</slot></a>

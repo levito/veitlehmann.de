@@ -1,0 +1,9 @@
+---
+layout: src/layouts/Home.astro
+title: Deutsch
+---
+
+import Link from 'src/components/Link.astro'
+export const link = (id) => <Link intro id={id} />
+
+Hallo, ich bin Veit Lehmann, {link(1)} mit einer Passion für {link(2)}, {link(3)} und {link(4)}.

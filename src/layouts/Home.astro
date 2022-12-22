@@ -1,0 +1,22 @@
+---
+import Link from 'src/components/Link.astro'
+import { defaultLanguage, Language, languages } from 'src/utils'
+
+export type Props = {
+  frontmatter: {
+    lang: Language
+  }
+}
+
+const { lang } = Astro.props.frontmatter
+const otherLanguages = languages
+  .filter((language) => language !== (lang || defaultLanguage))
+  .map((language) => (language === defaultLanguage ? '' : language))
+---
+
+<div class="section__intro"><slot /></div>
+<footer class="footer">
+  Copyright &copy; {new Date().getFullYear()} Veit Lehmann
+  <Link intro id={5} lang={lang} />
+  {otherLanguages.map((language) => <Link intro id={0} lang={language} />)}
+</footer>

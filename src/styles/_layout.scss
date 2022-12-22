@@ -81,6 +81,7 @@ body {
   }
 }
 
+.link--0,
 .link--5 {
   color: $color-silver;
 
@@ -172,7 +173,21 @@ body {
 }
 
 .footer {
+  display: flex;
+  justify-content: center;
   color: $color-silver;
   font-size: 1.2rem;
-  text-align: center;
+
+  .link {
+    position: relative;
+    margin-left: 1em;
+
+    &::before {
+      content: '\00B7';
+      position: absolute;
+      left: -.67em;
+      color: $color-silver;
+      pointer-events: none;
+    }
+  }
 }

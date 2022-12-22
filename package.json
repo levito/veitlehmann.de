@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^0.13.0",
+    "@sindresorhus/slugify": "^2.1.1",
     "astro": "^1.7.2",
     "postcss-scss": "^4.0.6",
     "sass": "^1.57.1",

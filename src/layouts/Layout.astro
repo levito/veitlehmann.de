@@ -1,17 +1,19 @@
 ---
 import Section, { type SectionEntry } from 'src/components/Section.astro'
 import 'src/styles/index.scss'
+import type { Language } from 'src/utils'
 
 export type Props = {
+  lang: Language
   sections: SectionEntry[]
   title: string
 }
 
-const { sections, title } = Astro.props
+const { lang, sections, title } = Astro.props
 ---
 
 <!DOCTYPE html>
-<html>
+<html lang={lang}>
   <head>
     <title>{title}</title>
     <meta charset="utf-8" />

@@ -12,10 +12,10 @@ const { Content } = await render()
 ---
 
 <section class={`section section--${side}`}>
-  {slug ? <a id={slug} class={`js_target target target--${side}`} /> : null}
+  {side > 0 ? <a id={slug} class={`js_target target target--${side}`} /> : null}
   <div class="section__body js_section__body">
     <div class="section__content">
-      {title ? <h1 class="section__title">{title}</h1> : null}
+      {side > 0 ? <h1 class="section__title">{title}</h1> : null}
       <Content />
     </div>
   </div>
