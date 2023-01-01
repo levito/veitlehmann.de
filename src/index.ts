@@ -7,22 +7,23 @@ if (CSS.supports('transform-style', 'preserve-3d') && !mediaQuery.matches) {
   document.body.prepend(...document.querySelectorAll('.js_target'))
 
   document.addEventListener('transitionend', (e) => {
-    if (!e.target.matches('a')) {
+    if (!(e.target as Element).matches('a')) {
       sectionBodies.forEach((sectionBody) => sectionBody.scrollTo(0, 0))
       html.classList.add('is-flat', 'is-static')
     }
   })
 
   document.addEventListener('click', (e) => {
-    const href = e.target.getAttribute('href')
+    const target = e.target as Element
+    const href = target.getAttribute('href')
 
-    if (e.target.matches('a') && href[0] === '#') {
+    if (target.matches('a') && href?.[0] === '#') {
       e.preventDefault()
       html.classList.remove('is-flat')
 
       setTimeout(() => {
         html.classList.remove('is-static')
-        window.location.hash = href.substr(1)
+        window.location.hash = href.substring(1)
       }, 0)
     }
   })
